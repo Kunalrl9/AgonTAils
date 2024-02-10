@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import 'react-native-gesture-handler';
 
 
 // Your Login component
@@ -29,7 +30,7 @@ const Login = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login </Text>
-      <Image source={require('./assets/logo.png')} style={styles.logo} />
+      <Image source={require('../AwesomeProject/src/screen/assets/logo.png')} style={styles.logo} />
 
       <TextInput
         style={styles.input}

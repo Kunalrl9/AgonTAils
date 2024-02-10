@@ -8,37 +8,42 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Carousel from 'react-native-snap-carousel';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import 'react-native-gesture-handler';
 
 
 
 
-const Home = () => {
+const Tab = createBottomTabNavigator();
+
+
+
+const Home_discover = () => {
   const carouselData = [
-    { id: '1', image: require('../AwesomeProject/assets/fire.jpg') },
-    { id: '2', image: require('../AwesomeProject/assets/images.jpg') },
-    { id: '3', image: require('../AwesomeProject/assets/sword-art-online-sao.png') },
+    { id: '1', image: require('../screen/assets/fire.jpg') },
+    { id: '2', image: require('../screen/assets/images.jpg') },
+    { id: '3', image: require('../screen/assets/sword-art-online-sao.png') },
     // { id: '4', image: require('../AwesomeProject/assets/Boruto.jpeg') },
   ];
   
 
   const menuData = [
-    { id: 'Kagurabachi', image: require('../AwesomeProject/assets/KK.jpeg') },
-    { id: 'SAKAMOTO DAYS', image: require('../AwesomeProject/assets/DAYS.jpeg') },
-    { id: 'My Hero Academia', image: require('../AwesomeProject/assets/MHA.jpeg') },
-    { id: 'Blue Exorcist', image: require('../AwesomeProject/assets/TT.jpeg') },
-    { id: 'One Piece', image: require('../AwesomeProject/assets/OP.jpeg') },
-    { id: 'Jujutsu Kaisen', image: require('../AwesomeProject/assets/JJK.jpeg') },
-    { id: 'Demon Slayer:..', image: require('../AwesomeProject/assets/DS.jpeg') },
-    { id: 'Sachi’s Records...', image: require('../AwesomeProject/assets/8.jpeg') },
+    { id: 'Kagurabachi', image: require('../screen/assets/KK.jpeg') },
+    { id: 'SAKAMOTO DAYS', image: require('../screen/assets/DAYS.jpeg') },
+    { id: 'My Hero Academia', image: require('../screen/assets/MHA.jpeg') },
+    { id: 'Blue Exorcist', image: require('../screen/assets/TT.jpeg') },
+    { id: 'One Piece', image: require('../screen/assets/OP.jpeg') },
+    { id: 'Jujutsu Kaisen', image: require('../screen/assets/JJK.jpeg') },
+    { id: 'Demon Slayer:..', image: require('../screen/assets/DS.jpeg') },
+    { id: 'Sachi’s Records...', image: require('../screen/assets/8.jpeg') },
   ];
 
   const menuData2 = [
-    { id: 'Akane-banashi', image: require('../AwesomeProject/assets/week/311638.jpg') },
-    { id: 'Blue Box', image: require('../AwesomeProject/assets/week/311824.jpg') },
-    { id: 'Me & Roboco', image: require('../AwesomeProject/assets/week/313120.jpg') },
-    { id: 'Nue s Exorcist', image: require('../AwesomeProject/assets/week/313420.jpg') },
-    { id: 'WITCH WATCH', image: require('../AwesomeProject/assets/week/314236.jpg') },
-    { id: 'Kill Blue', image: require('../AwesomeProject/assets/week/315466.jpg') },
+    { id: 'Akane-banashi', image: require('../screen/assets/week/311638.jpg') },
+    { id: 'Blue Box', image: require('../screen/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', image: require('../screen/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', image: require('../screen/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', image: require('../screen/assets/week/314236.jpg') },
+    { id: 'Kill Blue', image: require('../screen/assets/week/315466.jpg') },
   ];
   const navigation = useNavigation();
   const oky=()=>{
@@ -91,7 +96,7 @@ const Home = () => {
       </View>
       {/* </View> */}
 
-      {/* Carousel */}
+      {/* Carousel
       <Carousel
         data={carouselData}
         renderItem={renderItem}
@@ -101,7 +106,7 @@ const Home = () => {
         autoplay={true}
         autoplayInterval={3000}
         loop={true}
-      />
+      /> */}
 
       {/* Horizontal Scroll Menu */}
       <Text style={styles.title}>TOP HOT</Text>
@@ -114,12 +119,9 @@ const Home = () => {
     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.menuContainer2}>
       {renderSecondMenuItems()}
     </ScrollView>
-   
-    
-    
-  
-
   </View>
+
+
   );
 };
 
@@ -258,4 +260,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home; 
+export default Home_discover; 

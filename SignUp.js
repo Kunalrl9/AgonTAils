@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet,Image,Button,ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import 'react-native-gesture-handler';
 
 
 
 const SignUp = () => {
  
   <ImageBackground
-      source={require('./assets/bg.jpg')} // Change this to the path of your image
+      source={require('../AwesomeProject/src/screen/assets/bg.jpg')} // Change this to the path of your image
       style={styles.backgroundImage}
     ></ImageBackground>
 
@@ -37,7 +38,7 @@ const SignUp = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>SignUp</Text>
-      <Image source={require('./assets/logo.png')} style={styles.logo} />
+      <Image source={require('../AwesomeProject/src/screen/assets/logo.png')} style={styles.logo} />
       
     
     
